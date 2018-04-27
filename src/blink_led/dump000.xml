@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<modules>
+<module name="blink_led.BlinkLED">
+<variables>
+<var name="led">
+<type kind="primitive" name="BOOLEAN"/>
+</var></variables>
+<methods>
+<method name="blink_led.BlinkLED" unsynthesizableFlag="false" autoFlag="false" synchronizedFlag="false" privateFlag="false" rawFlag="false" combinationFlag="false" parallelFlag="false" noWaitFlag="false" constructorFlag="true">
+<type kind="myself"/>
+<statement type="block">
+<statement type="expr">
+<expr kind="MethodInvocation"><method name="super"></method>
+<params>
+</params>
+</expr></statement>
+</statement>
+</method>
+<method name="run" unsynthesizableFlag="false" autoFlag="false" synchronizedFlag="false" privateFlag="false" rawFlag="false" combinationFlag="false" parallelFlag="false" noWaitFlag="false" constructorFlag="false">
+<type kind="primitive" name="VOID"/>
+<statement type="block">
+<statement type="while">
+<condition>
+<expr kind="ParenExpr"><expr kind="Literal" value="true" type="BOOLEAN"/></expr></condition>
+<body>
+<statement type="block">
+<statement type="expr">
+<expr kind="AssignExpr"><lhs><expr kind="Ident" value="led"/></lhs><rhs><expr kind="Literal" value="true" type="BOOLEAN"/></rhs></expr>
+</statement>
+<statement type="for">
+<init>
+<var name="i">
+<type kind="primitive" name="INT"/>
+<expr kind="Literal" value="0" type="INT"/></var></init>
+<condition>
+<expr kind="BinaryExpr" op="LT"><lhs>
+<expr kind="Ident" value="i"/></lhs>
+<rhs>
+<expr kind="Literal" value="5000000" type="INT"/></rhs>
+</expr>
+</condition><update>
+<statement type="expr">
+<expr kind="UnaryExpr" op="INC"><arg>
+<expr kind="Ident" value="i"/></arg>
+</expr>
+</statement>
+</update><body>
+<statement type="block">
+<statement type="skip"/>
+</statement>
+</body>
+</statement>
+<statement type="expr">
+<expr kind="AssignExpr"><lhs><expr kind="Ident" value="led"/></lhs><rhs><expr kind="Literal" value="false" type="BOOLEAN"/></rhs></expr>
+</statement>
+<statement type="for">
+<init>
+<var name="i">
+<type kind="primitive" name="INT"/>
+<expr kind="Literal" value="0" type="INT"/></var></init>
+<condition>
+<expr kind="BinaryExpr" op="LT"><lhs>
+<expr kind="Ident" value="i"/></lhs>
+<rhs>
+<expr kind="Literal" value="5000000" type="INT"/></rhs>
+</expr>
+</condition><update>
+<statement type="expr">
+<expr kind="UnaryExpr" op="INC"><arg>
+<expr kind="Ident" value="i"/></arg>
+</expr>
+</statement>
+</update><body>
+<statement type="block">
+<statement type="skip"/>
+</statement>
+</body>
+</statement>
+</statement>
+</body>
+</statement>
+</statement>
+</method>
+</methods>
+</module>
+</modules>
